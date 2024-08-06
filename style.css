@@ -127,6 +127,7 @@ h1 {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    /*flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
 }
 
 .social-btn-container {
@@ -141,16 +142,17 @@ h1 {
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 21px;
     margin-top: 10px;
     border-radius: 50px;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .social-btn:hover {
     transform: translateY(-5px) rotateX(10deg);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 14px 28px rgba(0, 0, 0, 0.2);
 }
 
 .social-btn.whatsapp {
@@ -165,9 +167,24 @@ h1 {
     background-color: #FF0000;
 }
 
-@media (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 450px) {
+    .dropdown-content {
+        width: 100%; /* Make dropdown content full width on mobile */
+    }
+
+    .social-buttons {
+        flex-direction: column; /* Stack social buttons vertically on mobile */
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .social-btn-container {
+        margin: 10px 0; /* Add vertical margin for spacing */
+    }
+
     .social-btn {
-        font-size: 14px;
+        font-size: 17px;
         padding: 8px 16px;
         margin: 0 5px;
     }
