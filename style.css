@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+    background-color: #eee;
+    min-height: 100%;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+#animated-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #F0EAD2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#title {
+    position: relative;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    color: black;
+    z-index: 100;
+}
+
+#container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+canvas#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Custom Loader */
+.custom-loader {
+    width: 120px;
+    height: 22px;
+    border-radius: 20px;
+    color: #F4BF00;
+    border: 2px solid;
+    position: relative;
+    margin-top: 20px;
+}
+
+.custom-loader::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: #F4BF00;
+    animation: p6 2s infinite;
+}
+
+@keyframes p6 {
+    100% {
+        inset: 0;
+    }
+}
+
+/* Main Content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: none;
+}
+
+h1 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.dropdown {
+    margin-bottom: 1rem;
+    perspective: 1000px;
+}
+
+.dropdown-toggle {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown-toggle:hover {
+    transform: translateY(-5px) rotateX(10deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content {
+    display: none;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 5px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.social-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-btn.whatsapp {
+    background-color: #25D366;
+}
+
+.social-btn.instagram {
+    background-color: #C13584;
+}
+
+.social-btn.youtube {
+    background-color: #FF0000;
+}
+
+@media (max-width: 768px) {
+    .social-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin: 0 5px;
+    }
+}
