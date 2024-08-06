@@ -91,43 +91,57 @@ h1 {
     perspective: 1000px;
 }
 
-.dropdown-toggle {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
+.pushable {
+    background:#104175;
+    border-radius: 12px;
     border: none;
+    padding: 0;
     cursor: pointer;
+    outline-offset: 4px;
     width: 100%;
     text-align: left;
-    outline: none;
-    border-radius: 5px;
-    transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.dropdown-toggle:hover {
-    transform: translateY(-5px) rotateX(10deg);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.front {
+    display: block;
+    width: 100%;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: #007bff;
+    color: white;
+    transform: translateY(-6px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pushable:active .front {
+    transform: translateY(-2px);
 }
 
 .dropdown-content {
     display: none;
-    padding: 10px 20px;
+    padding: 15px 25px;
+    font-size: 18px;
+    line-height: 1.5;
     background-color: white;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-top: 5px;
+    margin-top: 10px;
+    text-align: justify;
+    overflow: hidden; /* Ensure no scrolling */
 }
 
 .social-buttons {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
-    /*flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
+    flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
 }
 
 .social-btn-container {
@@ -138,54 +152,126 @@ h1 {
 }
 
 .social-btn {
-    background-color: #007bff;
-    color: white;
+    background:#104175;
+    border-radius: 12px;
     border: none;
-    padding: 10px 20px;
-    font-size: 21px;
-    margin-top: 10px;
-    border-radius: 50px;
+    padding: 0;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    outline-offset: 4px;
+    width: 100%;
+    text-align: center;
 }
 
-.social-btn:hover {
-    transform: translateY(-5px) rotateX(10deg);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 14px 28px rgba(0, 0, 0, 0.2);
+.pushable .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: #007bff;
+    color: white;
+    transform: translateY(-6px);
+}
+.pushable .front1 {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: #46c856;
+    color: white;
+    transform: translateY(-6px);
+}
+.pushable .front2 {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: #cf2972;
+    color: white;
+    transform: translateY(-6px);
+}
+.pushable .front3 {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: #be2e2a;
+    color: white;
+    transform: translateY(-6px);
+}
+.pushable .front4 {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: #fad933;
+    color: white;
+    transform: translateY(-6px);
 }
 
-.social-btn.whatsapp {
-    background-color: #25D366;
+.pushable:active .front {
+    transform: translateY(-2px);
+}
+.pushable:active .front1 {
+    transform: translateY(-2px);
+}
+.pushable:active .front2 {
+    transform: translateY(-2px);
+}
+.pushable:active .front3 {
+    transform: translateY(-2px);
+}
+.pushable:active .front4 {
+    transform: translateY(-2px);
 }
 
-.social-btn.instagram {
-    background-color: #C13584;
-}
-
-.social-btn.youtube {
-    background-color: #FF0000;
-}
 
 /* Responsive Design */
-@media (max-width: 450px) {
+@media (max-width: 768px) {
     .dropdown-content {
-        width: 100%; /* Make dropdown content full width on mobile */
+        width: calc(100% - 40px); /* Ensure no horizontal scrolling */
+        margin-left: 0;
+        margin-right: 0;
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    .front {
+        font-size: 16px;
+        padding: 10px 15px;
     }
 
     .social-buttons {
         flex-direction: column; /* Stack social buttons vertically on mobile */
         align-items: center;
-        flex-wrap: wrap;
     }
 
     .social-btn-container {
         margin: 10px 0; /* Add vertical margin for spacing */
     }
 
-    .social-btn {
-        font-size: 17px;
-        padding: 8px 16px;
+    .pushable {
+        font-size: 14px;
+        padding-bottom: 7px;
+        padding-left: 8px;
         margin: 0 5px;
     }
+    .social-btn-container .pushable{
+        font-size: 14px;
+        padding-bottom: 7px;
+        padding-left: 8px;
+        margin: 0 5px; 
+    }
+    .front1 {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    .front2 {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    .front3 {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
 }
